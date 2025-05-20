@@ -1,5 +1,30 @@
 # React + TypeScript + Vite
 
+### Archivo activity-reducer.ts
+
+```
+import type { Activity } from "../types"
+
+export type ActivityActions = {
+
+}
+
+type ActivityState = {
+    activities : Activity[]
+}
+
+export const initialState : ActivityState = {
+    activities : []
+}
+
+export const activityReducer = (
+    state: ActivityState = initialState,
+    action: ActivityActions
+) => {
+
+}
+```
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:

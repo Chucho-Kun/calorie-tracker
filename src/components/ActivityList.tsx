@@ -1,7 +1,7 @@
 import { useMemo , Dispatch } from "react"
 import type { Activity } from "../types"
 import { categories } from "../data/categories"
-import { PencilSquareIcon } from '@heroicons/react/24/outline'
+import { PencilSquareIcon, XCircleIcon } from '@heroicons/react/24/outline'
 import type { ActivityActions } from "../reducers/activity-reducer"
 
 type ActivityListProps = {
@@ -37,6 +37,15 @@ const categoyName = useMemo( () => ( category : Activity['category'] ) => catego
                             className="h-6 w-6 text-gray-800 cursor-pointer"
                         />
                     </button>
+
+                    <button
+                        onClick={ () => dispatch({ type: 'delet-activity' , payload: { id: activity.id } })}
+                    >
+                        <XCircleIcon 
+                            className="h-6 w-6 text-red-500 cursor-pointer"
+                        />
+                    </button>
+
                 </div>
             </div>
 

@@ -23,7 +23,7 @@ const isEmptyActivities = useMemo( () => activities.length === 0 , [ activities 
         
         activities.map((activity) => (
 
-            <div key={activity.id} className="px-5 py-10 bg-white mt-5 flex justify-between" >
+            <div key={activity.id} className="px-5 py-10 bg-white mt-5 flex justify-between shadow" >
                 <div className="space-y-2 relative">
                     <p className={`absolute -top-8 -left-8 px-10 py-2 text-white uppercase font-bold ${ activity.category === 1 ? 'bg-lime-500' : 'bg-orange-500 '}`}>
                         { categoyName( +activity.category ) }

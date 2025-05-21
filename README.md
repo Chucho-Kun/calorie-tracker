@@ -1,4 +1,11 @@
 # React + TypeScript + Vite
+### Compilacion de Typescript sin errores
+```
+useEffect()
+useState()
+useMemo()
+useReducer()
+```
 
 ### Archivo activity-reducer.ts
 

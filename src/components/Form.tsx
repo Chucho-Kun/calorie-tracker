@@ -29,11 +29,11 @@ useEffect( () => {
 } , [ state.activeId ] )
 
 const handleChange = (e: ChangeEvent<HTMLInputElement> | SyntheticEvent<HTMLSelectElement, Event>) => {
-    
-    const isNumberField = [ 'category','calories' ].includes(e.target.id)
+    const target = e.target as HTMLInputElement | HTMLSelectElement
+    const isNumberField = [ 'category','calories' ].includes( target.id )
     setActivity({
         ...activity,
-        [ e.target.id ]: isNumberField ? +e.target.value : e.target.value
+        [ target.id ]: isNumberField ? +target.value : target.value
     })
 }
 
